@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray"
+    tools:ignore="HardcodedText"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:padding="20dp">
+
+
+
+    <!-- main layout -->
+        <TextView
+            android:id="@+id/workingsTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:lines="2"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textAlignment="textEnd"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@id/resultsTV"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/resultsTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textAlignment="textEnd"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- button row layout 1 -->
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <!--here is where the actual buttons will be in each row -->
+        <!--all clear button -->
+        <Button
+            style="@style/buttonNumber"
+            android:textColor="@color/red"
+            android:onClick="allClearAction"
+            android:text="AC"/>
+
+        <!--back space button -->
+        <Button
+            style="@style/buttonNumber"
+            android:text="⌫"
+            android:onClick="backSpaceAction"/>
+
+        <!--blank button -->
+        <Button
+            style="@style/buttonNumber"
+            android:text=""/>
+
+        <!--divide button-->
+        <Button
+            style="@style/buttonOperator"
+            android:text="÷"/>
+    </LinearLayout>
+
+    <!-- button row layout 2 -->
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <!--here is where the actual buttons will be -->
+        <!--7 button-->
+        <Button
+            style="@style/buttonNumber"
+            android:text="7"/>
+
+        <!--8 button-->
+        <Button
+            style="@style/buttonNumber"
+            android:text="8"/>
+
+        <!--9 button-->
+        <Button
+            style="@style/buttonNumber"
+            android:text="9"/>
+
+        <!--multiplication button-->
+        <Button
+            style="@style/buttonOperator"
+            android:text="x"/>
+    </LinearLayout>
+
+    <!-- button row layout 3-->
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <!--here is where the actual buttons will be -->
+        <!--4 button-->
+        <Button
+            style="@style/buttonNumber"
+            android:text="4"/>
+
+        <!--5 button-->
+        <Button
+            style="@style/buttonNumber"
+            android:text="5"/>
+
+        <!--6 button-->
+        <Button
+            style="@style/buttonNumber"
+            android:text="6"/>
+
+        <!--subtraction button-->
+        <Button
+            style="@style/buttonOperator"
+            android:text="-"/>
+    </LinearLayout>
+
+    <!-- button row layout 4 -->
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <!--here is where the actual buttons will be -->
+        <!--1 button-->
+        <Button
+            style="@style/buttonNumber"
+            android:text="1"/>
+
+        <!--2 button-->
+        <Button
+            style="@style/buttonNumber"
+            android:text="2"/>
+
+        <!--3 button-->
+        <Button
+            style="@style/buttonNumber"
+            android:text="3"/>
+
+        <!--addition button-->
+        <Button
+            style="@style/buttonOperator"
+            android:text="+"/>
+    </LinearLayout>
+
+    <!-- button row layout 5 -->
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <!--here is where the actual buttons will be -->
+        <!--decimal button-->
+        <Button
+            style="@style/buttonNumber"
+            android:text="."/>
+
+        <!--zero button-->
+        <Button
+            style="@style/buttonNumber"
+            android:text="0"/>
+
+        <!-- equals button-->
+        <Button
+            style="@style/buttonNumber"
+            android:layout_weight="2"
+            android:textSize="40sp"
+            android:onClick="equalsAction"
+            android:text="="/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
